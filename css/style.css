@@ -181,23 +181,31 @@
     overflow: hidden;
 }
 
-.carousel-item {
-    height: 100vh;
-    min-height: 300px;
+/* Styling for carousel controls */
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
 }
 
-.carousel-item .container-fluid {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        width: 20%; /* Lebar tombol ditingkatkan pada layar kecil */
+    }
+
+    .carousel-item {
+        text-align: center;
+    }
+
+    .carousel-item h2 {
+        font-size: 1.75rem; /* Ukuran font untuk judul pada layar kecil */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-.carousel-indicators button {
-    background-color: #fff;
-}
-
-.carousel-fade .carousel-item {
-    transition: opacity 0.5s ease-in-out;
 }
 
 
